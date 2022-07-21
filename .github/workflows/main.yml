@@ -22,7 +22,7 @@ jobs:
         path: repository
         submodules: true
     - name: Download Ubuntu Core Image
-      run: cd repository/src/image && wget -q -c --trust-server-names 'wget https://cdimage.ubuntu.com/releases/22.04/release/ubuntu-22.04-preinstalled-server-arm64+raspi.img.xz'
+      run: cd repository/src/image && wget -q -c --trust-server-names 'https://cdimage.ubuntu.com/releases/22.04/release/ubuntu-22.04-preinstalled-server-arm64+raspi.img.xz'
     - name: Update CustomPiOS Paths
       run: cd repository/src && ../../CustomPiOS/src/update-custompios-paths
     - name: Build Image
