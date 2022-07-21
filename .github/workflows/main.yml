@@ -21,8 +21,8 @@ jobs:
         repository: ${{ github.repository }}
         path: repository
         submodules: true
-    - name: Download Raspbian Image
-      run: cd repository/src/image && wget -q -c --trust-server-names 'https://downloads.raspberrypi.org/raspios_lite_armhf_latest'
+    - name: Download Ubuntu Core Image
+      run: cd repository/src/image && wget -q -c --trust-server-names 'https://cdimage.ubuntu.com/ubuntu-core/22/stable/current/ubuntu-core-22-arm64+raspi.img.xz'
     - name: Update CustomPiOS Paths
       run: cd repository/src && ../../CustomPiOS/src/update-custompios-paths
     - name: Build Image
